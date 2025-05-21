@@ -1,3 +1,12 @@
+/* Import Work Sans font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Apply Work Sans font throughout the whole application */
+body, html, * {
+  font-family: "Work Sans", sans-serif !important;
+  font-optical-sizing: auto;
+}
+
 /* Text visibility fixes - Override CSS variables */
 :root, .dark {
   --background: 0 0% 3.9%;
@@ -227,4 +236,62 @@ button[class*="variant-link"],
   background-color: rgba(147, 51, 234, 0.2) !important;
   color: rgb(216, 180, 254) !important;
   border: 1px solid rgba(147, 51, 234, 0.3) !important;
+}
+
+/* Work Sans font weight variants */
+.work-sans-thin {
+  font-weight: 100 !important;
+}
+
+.work-sans-extralight {
+  font-weight: 200 !important;
+}
+
+.work-sans-light {
+  font-weight: 300 !important;
+}
+
+.work-sans-regular {
+  font-weight: 400 !important;
+}
+
+.work-sans-medium {
+  font-weight: 500 !important;
+}
+
+.work-sans-semibold {
+  font-weight: 600 !important;
+}
+
+.work-sans-bold {
+  font-weight: 700 !important;
+}
+
+.work-sans-extrabold {
+  font-weight: 800 !important;
+}
+
+.work-sans-black {
+  font-weight: 900 !important;
+}
+
+/* Apply specific font weights to elements */
+h1, .text-4xl, .text-5xl, .text-6xl {
+  font-weight: 700 !important;
+}
+
+h2, .text-3xl {
+  font-weight: 600 !important;
+}
+
+h3, .text-2xl, .font-semibold {
+  font-weight: 500 !important;
+}
+
+button, a.button, .btn {
+  font-weight: 500 !important;
+}
+
+p, .text-base, .text-sm {
+  font-weight: 400 !important;
 }

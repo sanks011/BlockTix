@@ -9,6 +9,9 @@ const config: Config = {
     "*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
+    fontFamily: {
+      sans: ['"Work Sans"', 'sans-serif'],
+    },
     container: {
       center: true,
       padding: {
