@@ -13,7 +13,7 @@ export function BackgroundVideo() {
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-black/70 z-10" />
+      <div className="absolute inset-0 bg-black/80 z-10" />
       <video autoPlay loop muted playsInline className="absolute w-full h-full object-cover">
         <source
           src="https://cdn.pixabay.com/vimeo/414788377/abstract-41060.mp4?width=1280&hash=e9f8f3c2a7e4d1a3c8b2c6c4d1a3c8b2c6c4d1a3"
@@ -21,7 +21,7 @@ export function BackgroundVideo() {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/90" />
     </div>
   )
 }

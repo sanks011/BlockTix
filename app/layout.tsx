@@ -1,5 +1,6 @@
 import type React from "react"
 import "@/app/globals.css"
+import "@/app/text-fix.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -19,12 +20,14 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} min-h-screen bg-black text-white antialiased`}>
+      <body className={`${inter.className} min-h-screen bg-black antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <Web3Provider>
             <AuthProvider>
               <BackgroundVideo />
-              {children}
+              <div className="text-gray-100">
+                {children}
+              </div>
               <Toaster />
             </AuthProvider>
           </Web3Provider>

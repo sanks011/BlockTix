@@ -1,0 +1,230 @@
+/* Text visibility fixes - Override CSS variables */
+:root, .dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 100% !important;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 100% !important;
+  --popover: 0 0% 3.9%;
+  --popover-foreground: 0 0% 100% !important;
+  --primary: 270 95% 75%;
+  --primary-foreground: 0 0% 100% !important;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 100% !important;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 80% !important;
+  --accent: 270 95% 75%;
+  --accent-foreground: 0 0% 100% !important;
+  --ring: 270 95% 75% !important;
+}
+
+/* Improve text visibility everywhere */
+h1, h2, h3, h4, h5, h6, p, span, div, li, 
+[class*="text-sm"],
+[class*="text-base"],
+[class*="text-lg"], 
+[class*="text-xl"],
+[class*="text-foreground"] {
+  color: rgb(229, 231, 235) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Make links and buttons more visible */
+a:not(.nav-link), button:not(.bg-primary):not(.nav-button) {
+  color: rgb(216, 180, 254) !important;
+}
+
+/* Navigation specific fixes */
+.nav-link, .nav-button,
+nav a, nav button,
+header a, header button {
+  color: white !important;
+  font-weight: 500;
+}
+
+/* Tab component fixes */
+div[class*="tabs-list"] {
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+button[class*="tabs-trigger"] {
+  color: rgb(209, 213, 219) !important;
+}
+
+button[class*="tabs-trigger"][data-state="active"] {
+  color: white !important;
+  background-color: rgba(147, 51, 234, 0.2) !important;
+  border-bottom: 2px solid rgb(147, 51, 234) !important;
+}
+
+/* Popover and dropdown fixes */
+div[class*="popover-content"],
+div[class*="dropdown-content"] {
+  background-color: rgba(20, 20, 20, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+/* Headings should be even more visible */
+h1, h2, h3,
+div[class*="text-2xl"],
+div[class*="text-3xl"],
+div[class*="text-4xl"],
+div[class*="text-5xl"] {
+  color: white !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-weight: 700;
+}
+
+/* Web3 specific component fixes */
+/* Wallet address display */
+div[class*="wallet-"],
+span[class*="wallet-"],
+div:has(> svg[data-lucide="Wallet"]),
+div:has(> svg[data-lucide="QrCode"]) {
+  color: rgb(216, 180, 254) !important;
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  border: 1px solid rgba(147, 51, 234, 0.3) !important;
+}
+
+/* NFT cards and event cards */
+div[class*="event-card"],
+div[class*="nft-card"],
+div[class*="group relative overflow-hidden rounded-xl"] {
+  background-color: rgba(20, 20, 20, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Event details */
+div:has(> svg[data-lucide="Calendar"]),
+div:has(> svg[data-lucide="MapPin"]) {
+  color: rgb(209, 213, 219) !important;
+}
+
+/* Ensure form inputs have visible text */
+input, textarea, select,
+input[class*="flex h-10"],
+textarea[class*="flex min-h-"],
+div[class*="select-"] {
+  color: white !important;
+  background-color: rgba(30, 30, 30, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Input focus states */
+input:focus, textarea:focus, select:focus {
+  border-color: rgb(147, 51, 234) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(147, 51, 234, 0.3) !important;
+}
+
+/* Ensure form labels are visible */
+label,
+div[class*="text-sm font-medium"] {
+  color: rgb(229, 231, 235) !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+/* Fix placeholder text */
+::placeholder {
+  color: rgba(229, 231, 235, 0.5) !important;
+}
+
+/* Fix form validation messages */
+[class*="text-destructive"] {
+  color: rgb(239, 68, 68) !important;
+}
+
+/* Final edge case fixes */
+/* Fix any muted text */
+[class*="text-muted"],
+[class*="text-muted-foreground"],
+[class*="text-gray-"],
+[class*="text-zinc-"] {
+  color: rgb(209, 213, 219) !important;
+}
+
+/* Fix any primary colors */
+[class*="text-primary"],
+[class*="text-purple-"] {
+  color: rgb(216, 180, 254) !important;
+}
+
+/* Fix any icons */
+svg {
+  color: currentColor !important;
+}
+
+/* Footer fixes */
+footer *, 
+.footer * {
+  color: rgb(209, 213, 219) !important;
+}
+
+/* Dialog and modal fixes */
+[role="dialog"],
+[class*="modal-"],
+[class*="dialog-"] {
+  background-color: rgba(20, 20, 20, 0.95) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Make cards and containers more visible */
+.card, [class*="card-"],
+div[class*="rounded-lg border bg-card"] {
+  background-color: rgba(20, 20, 20, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Card header and content fixes */
+div[class*="card-header"], 
+div[class*="card-title"] {
+  color: white !important;
+}
+
+div[class*="card-description"] {
+  color: rgb(209, 213, 219) !important;
+}
+
+/* Specific fixes for buttons */
+button.bg-primary, .bg-primary, [class*="bg-primary"] {
+  background-color: rgb(147, 51, 234) !important;
+  color: white !important;
+}
+
+/* Button variants fix */
+button[class*="variant-default"], 
+.inline-flex[class*="bg-primary"] {
+  background-color: rgb(147, 51, 234) !important;
+  color: white !important;
+}
+
+button[class*="variant-outline"], 
+.inline-flex[class*="border-input"] {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: rgb(229, 231, 235) !important;
+}
+
+button[class*="variant-secondary"], 
+.inline-flex[class*="bg-secondary"] {
+  background-color: rgba(229, 231, 235, 0.1) !important;
+  color: white !important;
+}
+
+button[class*="variant-ghost"]:hover {
+  background-color: rgba(229, 231, 235, 0.1) !important;
+}
+
+button[class*="variant-link"], 
+.inline-flex[class*="variant-link"] {
+  color: rgb(216, 180, 254) !important;
+}
+
+/* Fix badge colors */
+.badge, [class*="badge-"] {
+  background-color: rgba(147, 51, 234, 0.2) !important;
+  color: rgb(216, 180, 254) !important;
+  border: 1px solid rgba(147, 51, 234, 0.3) !important;
+}
